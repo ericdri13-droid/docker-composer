@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: waha
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    envVars:
+      - key: WAHA_NO_API_KEY
+        value: false
+      - key: WAHA_API_KEY
+        value: minha_senha_segura
+      - key: WAHA_DASHBOARD_USERNAME
+        value: admin
+      - key: WAHA_DASHBOARD_PASSWORD
+        value: senha123
+      - key: WHATSAPP_DEFAULT_ENGINE
+        value: GOWS
+      - key: WHATSAPP_SWAGGER_NO_PASSWORD
+        value: true
+      - key: PORT
+        value: 3000
